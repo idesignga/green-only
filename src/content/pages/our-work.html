@@ -1,0 +1,398 @@
+---
+title: "Our Work | iDesign Site Demo"
+description: "Meta description for the page"
+permalink: "/our-work/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Dark Mode -->
+    <link rel="stylesheet" href="/assets/css/dark.css"/>
+
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/our-work.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Video                      -->
+<!-- ============================================ -->
+
+<section id="video-1682">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Check Out Our Work</span>
+            <h2 class="cs-title">See the Difference for Yourself</h2>
+        </div>
+        <a href="" class="cs-big-link">
+            <!--Background Image-->
+            <picture class="cs-background">
+                <source media="(min-width: 1024px)"
+                        srcset="/assets/images/DSC_0649.JPG">
+                <source media="(min-width: 601px)"
+                        srcset="/assets/images/DSC_0649.JPG">
+                <source media="(max-width: 600px)"
+                        srcset="/assets/images/DSC_0649.JPG">
+                <img aria-hidden="true" loading="lazy" decoding="async"
+                        src="/assets/images/DSC_0649.JPG"
+                        alt="meeting" width="1280" height="580">
+            </picture>
+            <!--Play Icon-->
+            <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-play-icon.svg"
+                    alt="play icon" width="110" height="110" aria-hidden="true">
+        </a>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">Weed Control</h3>
+                <p class="cs-item-text">
+                    <em>Our weed control service is all about precision. We target only what is necessary to deliver the right solution for...</em>
+                </p>
+                <a href="/weed-control/" class="cs-link">
+                    <span class="cs-link-text">Read More</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Shrub Treatment</h3>
+                <p class="cs-item-text">
+                   <em>Our shrub support and maintenance system uses special treatment techniques to keep your shrubs looking...</em>
+                </p>
+                <a href="/shrub-treatment/" class="cs-link">
+                    <span class="cs-link-text">Read More</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Flower Beds</h3>
+                <p class="cs-item-text">
+                    <em>Our Greenery Specialists take pride in their vision for installing beautiful beds of flowers—unique to each and every...</em>
+                </p>
+                <a href="/flower-beds/" class="cs-link">
+                    <span class="cs-link-text">Read More</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Map                       -->
+<!-- ============================================ -->
+
+<section id="map-720">
+    <!--Download the pin icon, in Figma create a 1920x600 rectangle and make its background a screenshot of the Google Maps location of your clients business location, make sure their actual location is at the center. Doesn't have to be EXACT. Then add the pin in Figma and absolutely position it where its location is in the map.  Highlight everything and hit CTRL G to group it, then export that section as a png.  Now you have your map graphic made for your client. Make an 800X1000 center crop of the image to load on mobile. Then remove this img tag for the icon. -->
+    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fred-pin.svg" alt="icon" decoding="async" width="80" height="80" aria-hidden="true">
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/map.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/map.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/map.jpg" alt="map" width="1280" height="600">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-405">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Going Green</span>
+            <h2 class="cs-title">See Us In Action</h2>
+            <div class="cs-button-group">
+                <button class="cs-button" data-filter="one">
+                    All
+                </button>
+                <button class="cs-button" data-filter="two">
+                    Weed Control
+                </button>
+                <button class="cs-button" data-filter="three">
+                    Shrub Treatment
+                </button>
+                <button class="cs-button" data-filter="four">
+                    Flower Beds
+                </button>
+            </div>
+        </div>
+        <div class="cs-gallery-wrapper">
+            <!--Gallery 1-->
+        <div class="cs-gallery" data-category="one">
+            <!--Picture 1-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/DSC_0651.JPG">
+                <source media="(min-width: 601px)" srcset="/assets/images/DSC_0651.JPG">
+                <img loading="lazy" decoding="async" src="/assets/images/DSC_0651.JPG" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20231013_132749.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20231013_132749.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20231013_132749.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/DSC_0628.JPG">
+                <source media="(min-width: 601px)" srcset="/assets/images/DSC_0628.JPG">
+                <img loading="lazy" decoding="async" src="/assets/images/DSC_0628.JPG" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20220824_143505.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20220824_143505.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20220824_143505.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240731_195126.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240731_195126.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240731_195126.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 7-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240621_185430.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240621_185430.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240621_185430.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 8-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/DSC_0660-2.JPG">
+                <source media="(min-width: 601px)" srcset="/assets/images/DSC_0660-2.JPG">
+                <img loading="lazy" decoding="async" src="/assets/images/DSC_0660-2.JPG" alt="gallery" width="305" height="400">
+            </picture>
+        </div>
+        <!--Gallery 2-->
+        <div class="cs-gallery cs-hidden" data-category="two">
+            <!--Picture 1-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 7-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 8-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20240330_180234.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20240330_180234.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20240330_180234.jpg" alt="gallery" width="305" height="400">
+            </picture>
+        </div>
+        <!--Gallery 3-->
+        <div class="cs-gallery cs-hidden" data-category="three">
+            <!--Picture 1-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20201014_144704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20201014_144704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20201014_144704.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20201014_144704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20201014_144704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20201014_144704.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20201014_144704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20201014_144704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20201014_144704.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20201014_144704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20201014_144704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20201014_144704.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20201014_144704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20201014_144704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20201014_144704.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20201014_144704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20201014_144704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20201014_144704.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 7-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20201014_144704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20201014_144704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20201014_144704.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 8-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20201014_144704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20201014_144704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20201014_144704.jpg" alt="gallery" width="305" height="400">
+            </picture>
+        </div>
+        <!--Gallery 4-->
+        <div class="cs-gallery cs-hidden" data-category="four">
+            <!--Picture 1-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 7-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 8-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="gallery" width="305" height="400">
+            </picture>
+        </div>
+        </div>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-66">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Words From Our Customers</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile1.png" alt="profile" width="68" height="68">
+                <span class="cs-name">John Doe</span>
+                <span class="cs-desc">Franklin County Mayor</span>
+                <p class="cs-item-text">
+                    Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius sed nec consequat, turpis.
+                </p>
+                <!--Stars-->
+                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fstars.svg" decoding="async" alt="quote icon" width="108" height="16">
+                <span class="cs-desc">Google</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.png" alt="profile" width="68" height="68">
+                <span class="cs-name">Jane Smith</span>
+                <span class="cs-desc">Teacher at Buford Middle School</span>
+                <p class="cs-item-text">
+                    Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius sed nec consequat, turpis.
+                </p>
+                <!--Stars-->
+                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fstars.svg" decoding="async" alt="quote icon" width="108" height="16">
+                <span class="cs-desc">Google</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png" alt="profile" width="68" height="68">
+                <span class="cs-name">Thomas Madden</span>
+                <span class="cs-desc">Local Dad & Football Coach</span>
+                <p class="cs-item-text">
+                    Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius sed nec consequat, turpis.
+                </p>
+                <!--Stars-->
+                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fstars.svg" decoding="async" alt="quote icon" width="108" height="16">
+                <span class="cs-desc">Google</span>
+            </li>
+        </ul>
+        <a aria-label="read more reviews" href="" class="cs-button-solid">Leave Us a Review!</a>
+    </div>
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Reviews/ladder-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Reviews/ladder.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/ladder.jpg" alt="ladder" width="1125" height="750" aria-hidden="true">
+    </picture>
+</section>
+                                
+<script src="/assets/js/gallery.js"></script>                                
+{% endblock %}

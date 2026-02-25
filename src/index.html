@@ -1,0 +1,242 @@
+---
+title: "iDesign Site Demo"
+description: "Meta description for the page"
+permalink: "/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+    <!-- Dark Mode -->
+    <link rel="stylesheet" href="/assets/css/dark.css"/>
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Form                      -->
+<!-- ============================================ -->
+
+<section id="cs-contact-485">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">A Greener Lawn Guaranteed. That's the <span class="cs-color">Green Promise</span>.</h2>
+            <p class="cs-text">
+                Schedule your <strong>FREE CONSULTATION</strong> with one of our <strong>Greenery Specialists</strong> today.
+            </p>
+            <span class="cs-heading">Problems with your booking?</span>
+            <span class="cs-heading">Contact us directly:</span>
+            <a href="tel:219-555-4545" class="cs-link">(706) 555-1234</a>
+            <a href="mailto:info@codestitch.com" class="cs-link">will@thegreenonly.com</a>
+        </div>
+        <!--Form-->
+        <form id="cs-form-485" name="Contact Form" method="post">
+            <h3 class="cs-h3">Schedule today for 10% OFF!</h3>
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-485" name="name" placeholder="Name">
+            </label>
+            <label class="cs-label">
+                Phone
+                <input class="cs-input" required type="text" id="phone-485" name="phone" placeholder="Phone">
+            </label>
+            <label class="cs-label">
+                Email
+                <input class="cs-input" required type="text" id="email-485" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label">
+                What day would you like to get started?
+                <input class="cs-input" type="date" id="schedule-485" name="schedule" placeholder="">
+            </label>
+            <label class="cs-label cs-label-message">
+                What services are you looking for?
+                <select name="services" id="cs-select-485">
+                    <option value="full renovation">Weed Control</option>
+                    <option value="sod install">Shrub Treatment</option>
+                    <option value="yard cleanup">Flower Beds</option>
+                    <option value="landscape design">Other</option>
+                </select>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Schedule Consult</button>
+        </form>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Contact-Page/house.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Contact-Page/house.jpg">
+        <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Contact-Page/house.jpg" alt="house" width="1920" height="1200">
+    </picture>
+</section>
+                              
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1981">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Ready to Go Green?</span>
+            <h2 class="cs-title">Your Lawn Has Never Been in Better Hands</h2>
+            <p class="cs-text-large">
+               When you choose <strong>Green Only</strong>, your lawn is in the hands of passionate specialists who not only prioritize both beauty and sustainability, but also honesty and flexibility. We believe in offering services that fit your schedule and budget while ensuring your lawn gets exactly what it needs—nothing more, nothing less.
+            </p>
+            <p class="cs-text">
+                From the moment you reach out, our team is committed to understanding your lawn’s unique needs and providing expert care that delivers real results. Whether you need routine maintenance or targeted treatments, we’re here to provide reliable, top-tier service you can trust.
+            </p>
+            <a href="" class="cs-button-solid">Get Started</a>
+            <div class="cs-ratings">
+                <div class="cs-stars">
+                    <img class="cs-star" loading="lazy" decoding="async" src="/assets/svgs/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="/assets/svgs/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="/assets/svgs/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="/assets/svgs/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="/assets/svgs/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                </div>
+                <div class="cs-rating">
+                    <h3 class="cs-h3">99% Customer Satisfaction</h3>
+                    <p class="cs-rating-text">
+                        based on hundreds of reviews and thousands of lawns treated.
+                    </p>
+                </div>
+                <!-- <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dentist-tooth.svg" alt="star" width="20" height="20"> -->
+            </div>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/DSC_0660.JPG">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/DSC_0660.JPG">
+                <img loading="lazy" decoding="async" src="/assets/images/DSC_0660.JPG" alt="staff member smiling" width="630" height="680">
+            </picture>
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/users.svg" alt="people" width="60" height="60">
+                <span class="cs-desc">
+                    Over 40 Years
+                </span>
+                <p class="cs-box-text">
+                    of lawn care experience and expertise.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Services</span>
+            <h2 class="cs-title">Offering Worldclass Solutions for All of Your Lawn's Needs</h2>
+            <p class="cs-text">
+                At Green Only, we are committed to keeping things simple—specializing in only what you need and nothing you don't.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/weed-control" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/assets/images/20200607_140659.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/20200607_140659.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/20200607_140659.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">Weed Control</h3>
+                    <p class="cs-item-text">
+                        Our weed control service is all about precision. We target only what is necessary to deliver the right solution for a thriving lawn.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/shrub-treatment" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/assets/images/20240726_202220.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/20240726_202220.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/20240726_202220.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">Shrub Treatment</h3>
+                    <p class="cs-item-text">
+                        Our shrub support and maintenance system uses special treatment techniques to keep your shrubs looking great through every season.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/flower-beds" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/assets/images/20190808_131154.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/20190808_131154.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/20190808_131154.jpg" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">Flower Beds</h3>
+                    <p class="cs-item-text">
+                        Our Greenery Specialists take pride in their vision for installing beautiful beds of flowers—unique to each and every client.
+                    </p>
+                </a>
+            </li>
+        </ul>
+        <a href="/our-work" class="cs-button-solid">Check Out Our Work</a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-2418">
+    <div class="cs-container">
+        <figure class="cs-card">
+            <div class="cs-content">
+                <h2 class="cs-topper">A Word From Real A Client</h2>
+                <p class="cs-title">
+                    "Green Only changed everything..."
+                </p>
+            </div>
+            <blockquote class="cs-blockquote">   
+                <p class="cs-review">
+                    Green Only changed everything for my lawn. I had been struggling with patchy grass and stubborn weeds for years, but after just a few treatments, my lawn is thriving like never before. The team was knowledgeable, friendly, and truly cared about the health of my lawn. I couldn't be happier with the results and highly recommend Green Only to anyone looking to transform their outdoor space.
+                </p>
+                <img class="cs-stars" src="/assets/svgs/stars5.svg" decoding="async" alt="" width="136" height="20" loading="lazy">
+            </blockquote>
+            <figcaption class="cs-info">
+                <img class="cs-profile" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/reviewbg-pet-services-840x840.jpg" decoding="async" alt="" width="52" height="52" loading="lazy">
+            
+                <span class="cs-name">
+                    Jenny Y.
+                    <span class="cs-desc">Teacher & Local Homeowner</span>
+                </span>
+                <!--Quote Icon-->
+                <svg class="cs-profile-graphic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="125" height="100" viewBox="0 0 125 100"><path fill="var(--primary)" d="M68.8 0 28.7 100H0L22.9 0h45.9Zm10.3 0L56.2 100h28.7L125 0H79.1Z"/></svg>
+            </figcaption>
+        </figure>
+    </div>
+    <picture class="cs-background">
+        <!-- coincides with css Custom mid Mobile/Tablet breakpoint -->
+         <!-- update media max and min below if css changes -->
+        <source media="(max-width: 767px)" srcset="/assets/images/20240731_195126.jpg">
+        <source media="(min-width: 768px)" srcset="/assets/images/20240731_195126.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/20240731_195126.jpg" alt="" width="630" height="877">
+    </picture>
+</section>
+                                
+                                
+{% endblock %}
